@@ -1,5 +1,6 @@
 import { User } from "@repo/types";
 import axios from "axios";
+// import omit from 'object.omit';
 
 const baseURL = 'http://localhost:3001';
 
