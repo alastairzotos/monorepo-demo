@@ -4,8 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsc --watch",
-    "start:dev": "nodemon -q ./dist"
+    "dev": "nodemon src/index.ts"
   },
   "devDependencies": {
     "@repo/types": "*",
@@ -20,6 +19,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.3",
+    "ts-node": "^10.9.2",
     "zod": "^3.22.4"
   }
 }

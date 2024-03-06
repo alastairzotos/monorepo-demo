@@ -8,8 +8,6 @@ export class Database {
 
     this.users[id] = { ...user, id };
 
-    console.log(this.users);
-
     return this.users[id];
   }
 

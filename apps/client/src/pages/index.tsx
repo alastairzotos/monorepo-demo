@@ -12,8 +12,6 @@ export default function Home() {
     getUsers().then(setUsers);
   }, [])
 
-  console.log(users);
-
   return (
     <>
       <Typography.Title>Welcome</Typography.Title>
