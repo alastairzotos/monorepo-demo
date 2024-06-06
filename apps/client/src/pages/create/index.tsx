@@ -16,7 +16,8 @@ const CreateUserPage: NextPage = () => {
     handleSubmit,
     formState: { isSubmitting, isValid },
   } = useForm<User>({
-    resolver: zodResolver(UserSchema)
+    resolver: zodResolver(UserSchema),
+    mode: 'all'
   })
 
   const onSubmit = async (data: User) => {

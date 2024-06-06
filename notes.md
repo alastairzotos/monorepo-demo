@@ -13,6 +13,14 @@ why do we want monorepos?
   changes in the frontend might not be reflected in the backend, or changes in a db schema might not be
     reflected in a form to create rows for that db table
 
+--
+start demo
+
+we want to define schemas and infer types
+
+end demo
+--
+
 benefits of monorepos?
   shared code can allow us to have a single source of truth
   shared schemas and types can be used to validate forms, API requests/responses, database schemas, etc
