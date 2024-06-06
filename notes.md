@@ -16,9 +16,8 @@ why do we want monorepos?
 --
 start demo
 
-we want to define schemas and infer types
-
-end demo
+notes to self:
+  we want to define schemas and infer types rather than define types directly
 --
 
 benefits of monorepos?

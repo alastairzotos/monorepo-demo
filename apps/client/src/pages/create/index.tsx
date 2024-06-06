@@ -37,20 +37,21 @@ const CreateUserPage: NextPage = () => {
         labelCol={{ span: 8 }}
         style={{ maxWidth: 600 }}
         onFinish={handleSubmit(onSubmit)}
+        disabled={isSubmitting}
       >
-        <FormItem control={control} name="name" label="Name" disabled={isSubmitting}>
+        <FormItem control={control} name="name" label="Name">
           <Input />
         </FormItem>
 
-        <FormItem control={control} name="age" label="Age" disabled={isSubmitting}>
+        <FormItem control={control} name="age" label="Age">
           <InputNumber />
         </FormItem>
 
-        <FormItem control={control} name="address.streetName" label="Street Name" disabled={isSubmitting}>
+        <FormItem control={control} name="address.streetName" label="Street Name">
           <Input />
         </FormItem>
 
-        <FormItem control={control} name="address.city" label="City" disabled={isSubmitting}>
+        <FormItem control={control} name="address.city" label="City">
           <Input />
         </FormItem>
 
