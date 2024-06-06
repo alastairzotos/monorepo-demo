@@ -1,23 +1,11 @@
-import type { User } from '@repo/types';
+import { environment } from './environment';
+import postgres from 'postgres';
+import { drizzle } from 'drizzle-orm/postgres-js';
+import * as schema from './drizzle/schemas';
 
-export class Database {
-  users: Record<string, User> = {};
+const client = postgres(environment.dbConnectionString);
 
-  addUser(user: User): User {
-    const id = Object.keys(this.users).length + 1;
-
-    this.users[id] = { ...user, id };
-
-    return this.users[id];
-  }
-
-  getUsers() {
-    return Object.values(this.users);
-  }
-
-  getUserById(id: string) {
-    return this.users[id];
-  }
-}
-
-export const db = new Database();
+export const db = drizzle(client, {
+  schema,
+  logger: false,
+});
