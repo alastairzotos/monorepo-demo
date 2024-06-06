@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { UserSchema } from '@repo/types';
 
-import { db } from './db';
+import { db } from './drizzle/db';
 import { UsersTable } from './drizzle/schemas';
 
 const app = express();
