@@ -1,4 +1,4 @@
-import { User } from "@repo/types";
+import { User, UserSchema } from "@repo/types";
 import axios from "axios";
 // import omit from 'object.omit';
 
@@ -9,11 +9,11 @@ export const createUser = async (data: User) => {
 }
 
 export const getUsers = async (): Promise<User[]> => {
-  const { data } = await axios.get('/users', { baseURL });
-  return data;
+  const { data } = await axios.get<User[]>('/users', { baseURL });
+  return data.map(item => UserSchema.parse(item));
 }
 
 export const getUserById = async (id: number): Promise<User> => {
   const { data } = await axios.get(`/users/${id}`, { baseURL });
-  return data;
+  return UserSchema.parse(data);
 }
